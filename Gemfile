@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 
+# allow better troubleshooting for Heroku, assets are served in production speeds up page loading times.
+gem 'rails_12factor', group: :production
+
 # Use postgresql as the database for Active Record
 gem 'pg'
 
