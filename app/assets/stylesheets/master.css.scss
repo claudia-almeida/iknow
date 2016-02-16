@@ -8,16 +8,18 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6, .navbar {
+  margin:0;
+}
+
 .navbar-default {
   background-color: #8BBF2A;
   border: none;
   border-radius: 0;
 	background-image: url('gun_metal.png');
-	background-color: rgba(140, 189, 56, .8);
   color: #ffffff;
   height: 60px;
   padding-top: 5px;
-  margin-bottom: 5px;
 }
 
 .navbar-default .navbar-brand{
@@ -48,3 +50,48 @@
 .navbar-default .navbar-collapse, .navbar-default .navbar-form{
   border-top: none;
 }
+
+
+.hero {
+  background: url('hero.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 400px;
+  box-shadow: 0px 1px 10px #000000;
+}
+
+.frosty {
+  background:rgba(0,0,0, 0.5);
+  color: white;
+}
+
+.frosty h1{
+  font-family: 'Open Sans', Helvetica;
+  font-weight: 100;
+  text-shadow: rgba(0,0,0,0.95) 1px 1px;
+}
+
+.frost h2 {
+  font-family: 'Open Sans', Helvetica;
+  font-weight: 200;
+  text-shadow: rgba(0,0,0,0.95) 1px 1px;
+}
+
+.btn {
+  border-radius: 0;
+  padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
