@@ -1,0 +1,50 @@
+@import url(https://fonts.googleapis.com/css?family=Handlee|Open+Sans|Loved+by+the+King);
+
+ html,body{
+  background: transparent !important;
+  height:100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-default {
+  background-color: #8BBF2A;
+  border: none;
+  border-radius: 0;
+	background-image: url('gun_metal.png');
+	background-color: rgba(140, 189, 56, .8);
+  color: #ffffff;
+  height: 60px;
+  padding-top: 5px;
+  margin-bottom: 5px;
+}
+
+.navbar-default .navbar-brand{
+	color: #ffffff;
+  font-weight: bolder;
+	font-size: 25px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.navbar-default .navbar-brand:hover{
+  color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a{
+  color: #ffffff;
+  color: rgba(255,255,255,.7);
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+  border-top: none;
+}
