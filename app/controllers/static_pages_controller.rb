@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-	before_filter :authenticate_user!, except: [:shouw, :index]
+	before_filter :authenticate_user!, except: [:show, :index]
 	def index
 		
 	end
