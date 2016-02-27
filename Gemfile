@@ -5,6 +5,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.1'
 
 gem 'carrierwave'
+gem "figaro"
+gem "fog", "~> 1.3.1"
 
 # allow better troubleshooting for Heroku, assets are served in production speeds up page loading times.
 gem 'rails_12factor', group: :production
