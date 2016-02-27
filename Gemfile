@@ -5,6 +5,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.1'
 
 gem 'carrierwave'
+gem 'mini_magick', '~> 4.3.1'
+gem 'carrierwave-aws'
+
 gem "figaro"
 gem "fog", "~> 1.3.1"
 
