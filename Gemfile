@@ -11,6 +11,8 @@ gem 'carrierwave-aws'
 gem "figaro"
 gem "fog", "~> 1.3.1"
 
+gem 'stripe'
+
 # allow better troubleshooting for Heroku, assets are served in production speeds up page loading times.
 gem 'rails_12factor', group: :production
 
