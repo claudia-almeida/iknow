@@ -13,6 +13,10 @@ gem "fog", "~> 1.3.1"
 
 gem 'stripe'
 
+gem 'ranked-model'
+
+gem 'jquery-ui-rails'
+
 # allow better troubleshooting for Heroku, assets are served in production speeds up page loading times.
 gem 'rails_12factor', group: :production
 
