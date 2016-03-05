@@ -6,11 +6,24 @@
   margin: 0;
   padding: 0;
   font-family: "Helvetica Neue", Helvetica;
-  color: #cccccc;
+  color: #4A4A4A;
 }
 
 h1, h2, h3, h4, h5, h6, .navbar {
   margin:0;
+}
+
+h1, h2, h3 {
+  color: #4A4A4A;
+}
+
+a {
+  color: #292929;
+}
+
+a:hover{
+  color: #28C4C9;
+  text-decoration: none;
 }
 
 .navbar-default {
@@ -20,6 +33,7 @@ h1, h2, h3, h4, h5, h6, .navbar {
 	background-image: url('fabric.png');
   height: 60px;
   padding-top: 5px;
+  box-shadow: 0px 1px 10px #E8EAE9;
 }
 
 .navbar-default .navbar-brand{
@@ -30,18 +44,18 @@ h1, h2, h3, h4, h5, h6, .navbar {
 }
 
 .navbar-default .navbar-brand:hover{
-
+  color: #28C4C9;
 }
 
 .navbar-default .navbar-nav > li > a{
   
-  color: rgba(255,255,255,.7);
+  color: #292929;
   font-size: 18px;
   font-weight: bolder;
 }
 
 .navbar-default .navbar-nav > li > a:hover{
- 
+  color: #2ACCD1;
   font-size: 18px;
   font-weight: bolder;
 }
@@ -52,24 +66,22 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 
 .hero {
-  background: url('hero.jpg') no-repeat center center fixed;
+  background: url('rocks.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   height: 400px;
-  box-shadow: 0px 1px 10px #cccccc;
+  box-shadow: 0px 1px 10px #E8EAE9;
 }
 
 .frosty {
-  background:rgba(0,0,0, 0.5);
   color: white;
 }
 
 .frosty h1{
   font-family: 'Open Sans', Helvetica;
   font-weight: 100;
-  text-shadow: rgba(0,0,0,0.95) 1px 1px;
 }
 
 .frost h2 {
@@ -79,8 +91,12 @@ h1, h2, h3, h4, h5, h6, .navbar {
 }
 
 .btn {
-  border-radius: 0;
-  padding: 5px;
+  border-radius: 0px;
+  padding: 8px 25px;
+  border: none;
+  color: #ffffff;
+  background-color: #28C4C9;
+  font-size: 14px;
 }
 .clear {
   clear: both;
@@ -104,19 +120,17 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 .section {
   padding: 20px;
-  color: #cccccc;
   
 }
 
 .lesson {
   padding: 10px;
-  background-color: #000000;
-  margin-top:10px;
-  height:150px;
+  margin: 0 10px;
+  height: 80px;
+  overflow: hidden;
 }
 
 .lesson a {
-  color: #cccccc;
   font-family: "Helvetica Neue",Helvetica;
   font-weight:100;
   font-size: 15px;
@@ -127,8 +141,33 @@ h1, h2, h3, h4, h5, h6, .navbar {
   font-size:20px;
 }
 
+.course-page{
+  border-bottom: 1px solid #E8EAE9;
+}
 
+.bottom-half{
+  background-color: #E8EAE9;
+  bottom: 0;
+  width: 100%;
+}
 
+.label-info{
+  font-weight: 100;
+  font-size: 15px;
+  background-color: #4A4A4A;
+  border-radius: 0;
+}
+
+.price {
+  color: #C93306;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.stripe-button {
+  background-image: none;
+  border-radius: 0;
+}
 
 
 
