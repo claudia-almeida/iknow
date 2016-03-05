@@ -1,12 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Handlee|Open+Sans|Loved+by+the+King);
 
  html,body{
-  background-image: url('dark_wall.png');
+  background-image: url('fabric.png');
   height:100%;
   margin: 0;
   padding: 0;
   font-family: "Helvetica Neue", Helvetica;
-  color: #ffffff;
+  color: #cccccc;
 }
 
 h1, h2, h3, h4, h5, h6, .navbar {
@@ -17,14 +17,12 @@ h1, h2, h3, h4, h5, h6, .navbar {
   background-color: #8BBF2A;
   border: none;
   border-radius: 0;
-	background-image: url('dark_wall.png');
-  color: #ffffff;
+	background-image: url('fabric.png');
   height: 60px;
   padding-top: 5px;
 }
 
 .navbar-default .navbar-brand{
-	color: #ffffff;
   font-weight: bolder;
 	font-size: 25px;
   padding-bottom: 20px;
@@ -32,18 +30,18 @@ h1, h2, h3, h4, h5, h6, .navbar {
 }
 
 .navbar-default .navbar-brand:hover{
-  color: #ffffff;
+
 }
 
 .navbar-default .navbar-nav > li > a{
-  color: #ffffff;
+  
   color: rgba(255,255,255,.7);
   font-size: 18px;
   font-weight: bolder;
 }
 
 .navbar-default .navbar-nav > li > a:hover{
-  color: #ffffff;
+ 
   font-size: 18px;
   font-weight: bolder;
 }
@@ -60,7 +58,7 @@ h1, h2, h3, h4, h5, h6, .navbar {
   -o-background-size: cover;
   background-size: cover;
   height: 400px;
-  box-shadow: 0px 1px 10px #000000;
+  box-shadow: 0px 1px 10px #cccccc;
 }
 
 .frosty {
@@ -92,7 +90,7 @@ h1, h2, h3, h4, h5, h6, .navbar {
   color: #ff3333;
   background-color: #FFEEEE;
   border-radius: 3px;
-  padding:8px;
+  padding:5px;
   margin:10px;
 }
 

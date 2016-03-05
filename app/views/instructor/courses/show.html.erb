@@ -1,6 +1,11 @@
 <script>
-
   $(function() {
+
+    $('.new-lesson-button').click(function( event ){
+      var lessonUrl = $(event.target).data('lesson-url');
+      $('#newLessonForm').attr('action', lessonUrl);
+    });
+
     $( ".lessons" ).sortable({
       update: function(event, ui) {
         $.ajax({
@@ -22,15 +27,21 @@
   <%= image_tag current_course.image, class: 'img-responsive' %>
   <div class="text-center">
   	<%= link_to 'Preview as a Student', course_path(current_course), class: "btn btn-default btn-lg" %>
+    <!-- Button trigger modal -->
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newSectionModal">
+  Add a new section...
+</button>
   	<br class="clear" />
-  	<%= link_to 'Add New Course Section', new_instructor_course_section_path(current_course), class: "btn btn-warning btn-lg" %>
   </div>
 
   <ul>
   	<% current_course.sections.each do |section| %>
   		<li>
   			<%= section.title %>
-        <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'pull-right btn btn-primary btn-xs' %>
+        <!-- Lesson trigger modal -->
+        <button class="pull-right btn btn-primary btn-xs new-lesson-button" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section)%>">
+          New Lesson...
+        </button>
         <br class="clear">
   		  <ul class="lessons">
            <% section.lessons.rank(:row_order).each do |lesson| %>
@@ -46,4 +57,61 @@
       </li>
     <% end %>
   </ul>
+
+
+
+
+<!-- Section Modal -->
+<div class="modal fade" id="newSectionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+         <h4 class="modal-title" id="newSectionModalLabel">Add a New Section</h4>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for @section, url: instructor_course_sections_path(current_course) do |f|%>
+            <div class="modal-body">
+            <%= f.input :title %>
+            <br />
+            <br />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <%= f.submit "Add a section", class: 'btn btn-primary' %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Lesson Modal -->
+<div class="modal fade" id="newLessonModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="newLessonModalLabel">Add New Lesson</h4>
+      </div>
+         <%= simple_form_for @lesson, url: "#", html: {id: 'newLessonForm' } do |f| %>
+         <div class="modal-body">
+          <%= f.input :title %>
+          <%= f.input :subtitle %>
+          <%= f.input :video %>
+          <br />
+          <br />
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <%= f.submit "Add the lesson", class: 'btn btn-primary' %>
+      </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 </div>
