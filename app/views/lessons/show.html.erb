@@ -2,7 +2,7 @@
 
 <div class="booyah-box col-xs-10 col-xs-offset-1">
   <h1><%= current_lesson.title %></h1>
-  <p>
+  <p class ="pull-left">
     <%= current_lesson.subtitle %>
   </p>
 
@@ -14,7 +14,14 @@
 
    <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
  </video>
-
+<br />
+<br />
+	<% if current_lesson.next_lesson.present? %>
+		<%= link_to lesson_path(current_lesson.next_lesson), class: 'btn btn-default pull-right' do %>
+			Next Lesson &nbsp;
+			<span class="glyphicon glyphicon-forward"></span>
+		<% end %>	
+	<% end %>
 
   
 </div>

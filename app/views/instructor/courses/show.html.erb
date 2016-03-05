@@ -12,13 +12,34 @@
           type: 'PUT',
           url: ui.item.data('update-url'),
           dataType: 'json',
-          data: { lesson: {row_order_position: ui.item.index() } }
+          data: { lesson: {row_order_position: ui.item.index() + 1 } }
         });
       }
     });
 
   });
- 
+
+</script>
+
+<script >
+  $('.new-section-button').click(function( event ){
+      var sectionUrl = $(event.target).data('section-url');
+      $('#newSectionForm').attr('action', Url);
+    });
+
+  $(function() {
+    $('.sections').sortable({
+      update: function( event, ui ) {
+        $.ajax({
+          type: 'PUT',
+          url: ui.item.data('update-url'),
+          dataType: 'json',
+          data: { section: { row_order_position: ui.item.index() + 1 } }
+        });
+      }
+    });
+   });
+
 </script>
 
 <br />
@@ -28,21 +49,23 @@
   <div class="text-center">
   	<%= link_to 'Preview as a Student', course_path(current_course), class: "btn btn-default btn-lg" %>
     <!-- Button trigger modal -->
-<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newSectionModal">
-  Add a new section...
-</button>
+  <button class="btn btn-primary btn-lg new-section-button" data-toggle="modal" data-target="#newSectionModal" data-section-url="<%= instructor_course_sections_path(current_course)%>">
+    Add a new section...
+  </button>
   	<br class="clear" />
   </div>
 
-  <ul>
-  	<% current_course.sections.each do |section| %>
-  		<li>
+
+
+  <ul ="sections">
+    <% current_course.sections.rank(:row_order).each do |section| %>
+  	<li data-update-url="<%= instructor_section_path(section) %>" >
   			<%= section.title %>
         <!-- Lesson trigger modal -->
         <button class="pull-right btn btn-primary btn-xs new-lesson-button" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section)%>">
           New Lesson...
         </button>
-        <br class="clear">
+
   		  <ul class="lessons">
            <% section.lessons.rank(:row_order).each do |lesson| %>
 
@@ -53,11 +76,9 @@
             </li>
           <% end %>
         </ul>
-        <br class="clr" />
       </li>
     <% end %>
   </ul>
-
 
 
 
@@ -70,7 +91,7 @@
          <h4 class="modal-title" id="newSectionModalLabel">Add a New Section</h4>
       </div>
       <div class="modal-body">
-        <%= simple_form_for @section, url: instructor_course_sections_path(current_course) do |f|%>
+        <%= simple_form_for @section, :url => instructor_course_sections_path(current_course) do |f| %>
             <div class="modal-body">
             <%= f.input :title %>
             <br />

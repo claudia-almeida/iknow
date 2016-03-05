@@ -54,11 +54,53 @@
 
 <div id="footer">
     <div class="container">
-      <b>Teachers</b>
-      <br />
-      <%= link_to 'Teach a course', new_instructor_course_path %>
+      <div class="col-xs-6 col-sm-3">
+        <br />
+        <b>Teachers</b>
+        <br />
+        <%= link_to 'Teach a Course', new_instructor_course_path %>
+        <br />
+        <%= link_to 'My Dashboard', dashboard_path %>
+      </div>
+
+      <div class="col-xs-6 col-sm-3">
+        <br />
+        <b>About</b>
+        <br />
+        <%= link_to 'Team', '#' %>
+        <br />
+        <%= link_to 'Careers', '#' %>
+        <br />
+        <%= link_to 'Privacy Policy', '#' %>
+      </div>
+
+      <div class="col-xs-6 col-sm-3">
+        <br />
+        <b>Contact</b>
+        <br />
+        learnstuff@eureka.com
+        <br />
+        123 Knowledge Rd
+        <br />
+        Columbia, MD 21045
+      </div>
+
+      <div class="col-xs-6 col-sm-3 social">
+        <br />
+        <b>Social</b>
+        <br />
+        <%= link_to 'http://youtube.com/cacauzen' do %>
+          <%= image_tag 'youtube.png', class: 'social-button' %>
+        <% end %>
+        <%= link_to 'http://facebook.com/' do %>
+          <%= image_tag 'facebook.png', class: 'social-button' %>
+        <% end %>
+        <%= link_to 'http://twitter.com/cacauzen' do %>
+          <%= image_tag 'youtube.png', class: 'social-button' %>
+        <% end %>
+      </div>
     </div>
-</div>
+  </div>
 
 </body>
 </html>
