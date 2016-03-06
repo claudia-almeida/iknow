@@ -28,7 +28,7 @@ a:hover{
 
 .navbar-default {
   background-color: #8BBF2A;
-  border: none;
+  border-bottom: 1px solid #28C4C9;
   border-radius: 0;
 	background-image: url('fabric.png');
   height: 60px;
@@ -97,6 +97,11 @@ a:hover{
   color: #ffffff;
   background-color: #28C4C9;
   font-size: 14px;
+}
+
+.btn:hover{
+  background-color: #4A4A4A;
+  color: #ffffff;
 }
 .clear {
   clear: both;
@@ -169,6 +174,9 @@ a:hover{
   border-radius: 0;
 }
 
+ul li {
+  list-style: none;
+}
 
 
 

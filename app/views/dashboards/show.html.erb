@@ -11,9 +11,7 @@
 				<%= link_to course.title, course_path(course) %>
 			</h3>
 			<%= image_tag course.image, class: 'img-responsive' %>
-			<div>
-				<%= course.description %>
-			</div>
+			<br />
 			<div>
 				<%= link_to "More Info...", course_path(course), class: 'btn btn-lg btn-primary' %>
 			</div>
@@ -34,9 +32,7 @@
 	      		<%= link_to course.title, course_path(course) %>
 	    	</h3>
 	    	<%= image_tag course.image, class: 'img-responsive' %>
-	    	<div>
-				<%= course.description %>
-			</div>
+	    	<br />
 			<div>
 				<%= link_to "More Info...", course_path(course), class: 'btn btn-lg btn-primary' %>
 			</div>
