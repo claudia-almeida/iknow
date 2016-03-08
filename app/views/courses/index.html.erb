@@ -5,7 +5,7 @@
   <hr />
 
 <% @courses.each do |course|%>
-	<div class="col-sm-6">
+	<div class="col-xs-6 col-sm-4">
 		<h2 class="text-left"><%= link_to course.title, course_path(course) %></h2>
 		<br />
 		<%= image_tag course.image, class: 'img-responsive' %>

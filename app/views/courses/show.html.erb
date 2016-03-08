@@ -4,7 +4,7 @@
   <div class="col-xs-12 course-page">
 
     <div class="col-xs-10 col-xs-offset-1">
-      
+
       <div class="col-xs-12 col-sm-6">
           <br />
           <br />
@@ -14,7 +14,7 @@
           <br />
           <br />
       </div>
-  
+
       <div class="col-xs-12 col-sm-6">
           <br />
           <br />
@@ -24,14 +24,14 @@
           <br class="clear"/>
       		<span class="price text-left">
       			<%= number_to_currency @course.cost %>
-      		</span>	
+      		</span>
           <br />
            <% if current_user && current_user == @course.user%>
           <br />
           <br />
             <%= link_to 'Administer', instructor_course_path(@course), class: "btn btn-default btn-large text-center" %>
             <br />
-          <% end %> 
+          <% end %>
 
           <br />
           <% if current_user && current_user.enrolled_in?(@course)%>
@@ -55,7 +55,7 @@
         <% end %>
       </div>
       </div>
- </div> 
+ </div>
 
  <br class="clear" />
 
@@ -77,16 +77,17 @@
             </div>
         <% end %>
         <br class="clear" />
-       
+
       </div>
-    <% end %> 
+    <% end %>
   </div>
- 
+
 
   <div class="col-xs-12 col-sm-4">
     <br />
     <h3>Your course List</h3>
     <br />
+     <% if user_signed_in? %>
       <% current_user.enrolled_courses.each do |course|%>
       <br />
       <%= image_tag course.image, class: 'img-responsive' %>
@@ -96,20 +97,10 @@
       </div>
       <br />
       <br />
-      
-  <% end %> 
+
+      <% end %>
+      <% end %>
     </div>
 
-   </div> 
+   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-

@@ -3,7 +3,7 @@ class LessonsController < ApplicationController
 	before_action :require_authorized_for_current_lesson, only: [:show]
 
 	def show
-		
+
 	end
 
 	private
@@ -11,7 +11,8 @@ class LessonsController < ApplicationController
 	def require_authorized_for_current_course
 		if current_course.user != current_user
 			render :text => "Unauthorized", :status => :unauthorized
-		end	
+
+		end
 	end
 
 	helper_method :current_lesson
