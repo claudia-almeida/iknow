@@ -9,8 +9,8 @@
   <script src="http://vjs.zencdn.net/5.0.2/video.js"></script>
 </head>
 <body>
-<div id="wrap">	
-<nav class="navbar navbar-default" role="navigation">
+<div id="wrap">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   	<div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
@@ -22,11 +22,12 @@
           </button>
 	      <%= link_to 'Chalkboard', root_path, class: "navbar-brand" %></li>
 	    </div>
-      
+
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-         <li><%= link_to 'See All Courses', courses_path %></li>
+         <li><%= link_to 'Learn', courses_path %></li>
       	<% if user_signed_in? %>
+        <li><%= link_to 'Teach', new_instructor_course_path %></li>
         <li><%= link_to 'My Profile', dashboard_path  %></li>
         <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
       	<% else %>
@@ -36,7 +37,7 @@
       </ul>
   	</div><!-- /.container-fluid -->
      </div>
-</nav>	
+</nav>
 
 <% if notice.present? %>
 <p class="alert alert-info"><%= notice %></p>

@@ -27,43 +27,44 @@ a:hover{
 }
 
 .navbar-default {
-  background-color: #8BBF2A;
+  background-color: #28C4C9;
   border-bottom: 1px solid #28C4C9;
   border-radius: 0;
-	background-image: url('fabric.png');
+	background-image: none;
   height: 60px;
   padding-top: 5px;
-  box-shadow: 0px 1px 10px #E8EAE9;
+  box-shadow: 0px 1px 10px rgba(0,0,0,.3);
 }
 
 .navbar-default .navbar-brand{
   font-weight: bolder;
 	font-size: 25px;
+  color: rgba(255,255,255,0.6);
   padding-bottom: 20px;
   padding-left: 20px;
 }
 
 .navbar-default .navbar-brand:hover{
-  color: #28C4C9;
+  color: #ffffff;
 }
 
 .navbar-default .navbar-nav > li > a{
-  
-  color: #292929;
+  color: #ffffff;
+  color: rgba(255,255,255,0.7);
   font-size: 18px;
   font-weight: bolder;
 }
 
 .navbar-default .navbar-nav > li > a:hover{
-  color: #2ACCD1;
+  color: #ffffff;
   font-size: 18px;
   font-weight: bolder;
 }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form{
   border-top: none;
+  background-color: #28C4C9;
 }
-
 
 .hero {
   background: url('rocks.jpg') no-repeat center center fixed;
@@ -125,7 +126,7 @@ a:hover{
 
 .section {
   padding: 20px;
-  
+
 }
 
 .lesson {
@@ -154,8 +155,8 @@ a:hover{
   background-color: #E8EAE9;
   bottom: 0;
   width: 100%;
-  padding-bottom: 200px;
-  margin-bottom: -100px;
+  padding-bottom: 250px;
+  margin-bottom: -190px;
 }
 
 .label-info{
@@ -180,6 +181,12 @@ ul li {
   list-style: none;
 }
 
-
-
-
+@media (max-width: 750px) {
+  .bottom-half{
+    background-color: #E8EAE9;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 50px;
+    margin-bottom: -390px;
+  }
+}

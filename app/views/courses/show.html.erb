@@ -1,5 +1,8 @@
 <br />
-
+<br />
+<br />
+<br />
+<br />
 
   <div class="col-xs-12 course-page">
 
@@ -16,11 +19,10 @@
       </div>
 
       <div class="col-xs-12 col-sm-6">
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
+          <br class="hidden-xs"/>
+          <br class="hidden-xs"/>
+          <br class="hidden-xs"/>
+          <br class="hidden-xs"/>
           <br class="clear"/>
       		<span class="price text-left">
       			<%= number_to_currency @course.cost %>
@@ -36,6 +38,8 @@
           <br />
           <% if current_user && current_user.enrolled_in?(@course)%>
             <h3 class="label label-info">You Are Enrolled!</h3>
+            <br />
+            <br />
             <br />
             <br />
           <% else %>
