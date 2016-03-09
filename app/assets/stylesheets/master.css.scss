@@ -6,15 +6,21 @@
   margin: 0;
   padding: 0;
   font-family: "Helvetica Neue", Helvetica;
-  color: #4A4A4A;
+  color: #262626;
 }
 
 h1, h2, h3, h4, h5, h6, .navbar {
   margin:0;
 }
 
-h1, h2, h3 {
-  color: #4A4A4A;
+.frosty h1 {
+  color: rgba(255,255,255,0.7);
+  font-weight: bolder;
+}
+
+.frosty h3 {
+  color: rgba(255,255,255,0.7);
+  font-weight: bolder;
 }
 
 a {
@@ -67,12 +73,13 @@ a:hover{
 }
 
 .hero {
-  background: url('rocks.jpg') no-repeat center center fixed;
+  background: url('hero.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 400px;
+  height: 500px;
+  margin-top: -50px;
   box-shadow: 0px 1px 10px #E8EAE9;
 }
 
@@ -177,6 +184,28 @@ a:hover{
   border-radius: 0;
 }
 
+.sections{
+  padding-left: 0;
+}
+
+.section-li{
+  background-color: #E8EAE9;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-left: 16px solid #C93306;
+}
+
+.lessons b {
+    border-left: 16px solid #C93306;
+    padding-left: 5px;
+}
+.alert{
+  padding-top: 50px;
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: -20px;
+}
 ul li {
   list-style: none;
 }
